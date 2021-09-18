@@ -49,7 +49,7 @@ namespace ClassPart2
             }
             Console.ReadLine();
 
-
+            // Push and Pop.
             //Stack myStack = new Stack();
             //myStack.Push(Console.ReadLine());
             //myStack.Push(Console.ReadLine());
