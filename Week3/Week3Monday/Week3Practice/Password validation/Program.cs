@@ -10,6 +10,7 @@ namespace Password_validation
     {
         static void Main(string[] args)
         {
+            char[] specialchar = new char[] { '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '+', '=', '_', '-', '{', '}', '[', ']', ':', ';', '"', '\'', '?', '<', '>', ',', '.' };
             string accepted;
             bool test;
             do
@@ -47,11 +48,38 @@ namespace Password_validation
                     }
                 }
 
-                if (j == 0 || k == 0 || l == 0)
+                if (j == 0)
                 {
-                    Console.WriteLine("Please create a password with at least one uppercase letter, one lowercase letter and one digit.");
+                    Console.WriteLine("Please create a password with at least one uppercase letter.");
                     test = false;
                 }
+                if (k == 0)
+                {
+                    Console.WriteLine("Please create a password with at least one lowercase letter.");
+                    test = false;
+                }
+                if (l == 0)
+                {
+                    Console.WriteLine("Please create a password with at least one digit.");
+                    test = false;
+                }
+                bool q = true;
+                foreach (char c in password)
+                {
+                    for (int i = 0; i < specialchar.Length; i++)
+                    {
+                        if (c == specialchar[i])
+                        {
+                            q = false;
+                            break;
+                        }
+                    }
+                }
+                if (q == true)
+                    {
+                        Console.WriteLine("Please create a password with at least one special character.");
+                    }
+
 
                 for (int i = 0; i < (password.Length - 2); i++)
                 {
@@ -63,6 +91,7 @@ namespace Password_validation
                 }
                 accepted = password;
             } while (test == false);
+
             Console.WriteLine(accepted + " is a valid password");
             Console.ReadLine();
         }
