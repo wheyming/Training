@@ -10,7 +10,53 @@ namespace Week3TuesdayPractice
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Q2: Please input your sentence.");
+            Console.WriteLine("Q1: Please input first number.");
+            int inputA = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Q2: Please input second number.");
+            int inputB = Convert.ToInt32(Console.ReadLine());
+            int[] inputAarr = new int[100];
+            int[] inputBarr = new int[100];
+            int LCM = 0;
+            bool w = true;
+            while (w == true)
+            {
+                for (int i = 1; i < 100; i++)
+                {
+                    inputAarr[i - 1] = (inputA * i);
+                    inputBarr[i - 1] = (inputB * i);
+
+                    for (int k = 0; k < i; k++)
+                    {
+                        if (inputAarr[i - 1] == inputBarr[k])
+                        {
+                            LCM = inputAarr[i - 1];
+                            w = false;
+                            break;
+                        }
+                        if (inputBarr[i - 1] == inputAarr[k])
+                        {
+                            LCM = inputBarr[i - 1];
+                            w = false;
+                            break;
+                        }
+                        else
+                        {
+                            continue;
+                        }
+                    }
+                    if (w == false)
+                    {
+                        break;
+                    }
+                }
+            }
+            Console.WriteLine($"The LCM of {inputA} and {inputB} is {LCM}.");
+            int HCF = ((inputA * inputB) / LCM);
+            Console.WriteLine($"The HCF of {inputA} and {inputB} is {HCF}.");
+
+
+
+            Console.WriteLine("\n\nQ2: Please input your sentence.");
             string input2 = Console.ReadLine();
             string[] input2arr = input2.Split(' ');
             Console.WriteLine("Number of words: " + input2arr.Length);
@@ -51,7 +97,7 @@ namespace Week3TuesdayPractice
             {
                 count4++;
             }
-            switch(count4)
+            switch (count4)
             {
                 case 3:
                     {
@@ -111,7 +157,7 @@ namespace Week3TuesdayPractice
             Console.WriteLine("\n\nQ5: Please input string.");
             string input5 = Console.ReadLine();
             string VA = "";
-            foreach(char q5 in (input5))
+            foreach (char q5 in (input5))
             {
                 int q5x = q5;
                 q5x++;
@@ -120,40 +166,7 @@ namespace Week3TuesdayPractice
             Console.WriteLine(VA);
 
 
-            //int inputA = Int32.Parse(Console.ReadLine());
-            //int inputB = Int32.Parse(Console.ReadLine());
-            //int[] inputAarr = new int[100] ;
-            //int[] inputBarr = new int[100] ;
-            //int LCM = 0;
-            //bool w = true;
-            //do
-            //{
-            //    for (int i = 1; i < 100; i++)
-            //    {
-            //        inputAarr[i - 1] = (inputA * i);
-            //        inputBarr[i - 1] = (inputB * i);
 
-            //        for (int k = 0; i < k; k++)
-            //        {
-            //            if (Equals(inputAarr[i - 1], inputBarr[k]))
-            //            {
-            //                LCM = inputAarr[i - 1];
-            //                w = false;
-            //            }
-            //        }
-
-            //        for (int j = 0; i < j; j++)
-            //        {
-            //            if (Equals(inputBarr[i - 1], inputBarr[j]))
-            //            {
-            //                LCM = inputBarr[i - 1];
-            //                w = false;
-            //            }
-            //        }
-
-            //    }
-            //} while (w == true);
-            //Console.WriteLine(LCM);
             Console.ReadLine();
         }
     }
