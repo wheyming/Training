@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4B301003-95CA-4F75-BEF4-96D5F97D0632}</ProjectGuid>
+    <ProjectGuid>{D71AA4C5-63DD-48DE-BF0C-5A710894FD9F}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Earthquake_Tsunami</RootNamespace>
-    <AssemblyName>Earthquake_Tsunami</AssemblyName>
+    <RootNamespace>Week3FridayDemonstration</RootNamespace>
+    <AssemblyName>Week3FridayDemonstration</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Earthquake.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

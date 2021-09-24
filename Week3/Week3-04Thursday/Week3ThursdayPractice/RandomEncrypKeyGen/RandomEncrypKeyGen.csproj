@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{162C647C-5465-4179-8767-24858A1FA0EB}</ProjectGuid>
+    <ProjectGuid>{F96B3133-3C65-4AF6-82AF-F76AC403735B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Week3ThursdayPractice</RootNamespace>
-    <AssemblyName>Week3ThursdayPractice</AssemblyName>
+    <RootNamespace>RandomEncrypKeyGen</RootNamespace>
+    <AssemblyName>RandomEncrypKeyGen</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,8 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Counter.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="RandomKeyGenClass.cs" />
+    <Compile Include="RandKeyProgram.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

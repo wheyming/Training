@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Earthquake_Tsunami
+namespace RandomEncrypKeyGen
 {
-    class Program
+
+    class RandKeyProgram
     {
         static void Main(string[] args)
         {

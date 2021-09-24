@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Week3ThursdayPractice
 {
 
-    class Program
+    class CounterProgram
     {    
         static void Main(string[] args)
         {
