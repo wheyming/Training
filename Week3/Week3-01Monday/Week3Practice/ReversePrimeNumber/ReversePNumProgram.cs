@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ReversePrimeNumber
 {
-    class Program
+    class ReversePNumProgram
     {
         public bool testForPrime(int a)
         {
@@ -40,7 +40,7 @@ namespace ReversePrimeNumber
         static void Main(string[] args)
         {
             int[] Numarr = new int[100];
-            Program P = new Program();
+            ReversePNumProgram P = new ReversePNumProgram();
             int Rnum;
             int Rarr = 0;
             for (int i = 1; i < 101; i++)

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Password validation", "Pass
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReversePrimeNumber", "ReversePrimeNumber\ReversePrimeNumber.csproj", "{60BEA283-33FC-4A05-B2EC-D0A70D5A18EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DaysNSession", "DaysNSession\DaysNSession.csproj", "{AAD11432-AD11-453E-AFED-3F1A29173383}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{60BEA283-33FC-4A05-B2EC-D0A70D5A18EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60BEA283-33FC-4A05-B2EC-D0A70D5A18EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60BEA283-33FC-4A05-B2EC-D0A70D5A18EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAD11432-AD11-453E-AFED-3F1A29173383}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAD11432-AD11-453E-AFED-3F1A29173383}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAD11432-AD11-453E-AFED-3F1A29173383}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAD11432-AD11-453E-AFED-3F1A29173383}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

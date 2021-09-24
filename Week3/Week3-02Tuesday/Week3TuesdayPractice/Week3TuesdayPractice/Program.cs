@@ -12,15 +12,15 @@ namespace Week3TuesdayPractice
         {
             Console.WriteLine("Q1: Please input first number.");
             int inputA = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Q2: Please input second number.");
+            Console.WriteLine("Please input second number.");
             int inputB = Convert.ToInt32(Console.ReadLine());
-            int[] inputAarr = new int[100];
-            int[] inputBarr = new int[100];
+            int[] inputAarr = new int[10000];
+            int[] inputBarr = new int[10000];
             int LCM = 0;
             bool w = true;
             while (w == true)
             {
-                for (int i = 1; i < 100; i++)
+                for (int i = 1; i < 10000; i++)
                 {
                     inputAarr[i - 1] = (inputA * i);
                     inputBarr[i - 1] = (inputB * i);
@@ -165,6 +165,31 @@ namespace Week3TuesdayPractice
             }
             Console.WriteLine(VA);
 
+            Console.WriteLine("\n\nQ6: Please input integer.");
+            int input6 = Int32.Parse(Console.ReadLine());
+            int Bi = input6;
+            int p = 0;
+            int z;
+            for(int q = 0; ; q++)
+            { 
+                if ( input6 <= Math.Pow(2, q) )
+                {
+                    z = (q + 1);
+                    break;
+                }
+            }
+
+            int[] Biint = new int[z];
+            do
+            {
+                Biint[z - 1 - p] = Bi % 2;
+                Bi /= 2;
+                p++;
+            } while (Bi != 0);
+            foreach (int nary in Biint)
+            {
+                Console.Write(nary);
+            }
 
 
             Console.ReadLine();
