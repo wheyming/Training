@@ -12,7 +12,7 @@ namespace LCMHCFEventDelegate
 
     class Program
     {
-        event EventHandler HCFcomputed;
+        event HCFCalculate HCFcomputed;
 
         static void Main(string[] args)
         {

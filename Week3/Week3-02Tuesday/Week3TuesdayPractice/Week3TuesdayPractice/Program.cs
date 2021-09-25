@@ -159,36 +159,110 @@ namespace Week3TuesdayPractice
             string VA = "";
             foreach (char q5 in (input5))
             {
-                int q5x = q5;
-                q5x++;
-                VA = VA + Convert.ToChar(q5x);
+                if (Char.IsLetterOrDigit(q5) == true)
+                {
+                    int q5x = q5;
+                    q5x++;
+                    VA = VA + Convert.ToChar(q5x);
+                }
+                else
+                {
+                    VA = VA + q5;
+                }
             }
             Console.WriteLine(VA);
 
             Console.WriteLine("\n\nQ6: Please input integer.");
             int input6 = Int32.Parse(Console.ReadLine());
             int Bi = input6;
+            int Hex = input6;
             int p = 0;
-            int z;
+            int s = 0;
+            int Hexsize;
+            int Bisize;
             for(int q = 0; ; q++)
             { 
                 if ( input6 <= Math.Pow(2, q) )
                 {
-                    z = (q + 1);
+                    Bisize = (q + 1);
                     break;
                 }
             }
 
-            int[] Biint = new int[z];
+            int[] Biint = new int[Bisize];
             do
             {
-                Biint[z - 1 - p] = Bi % 2;
+                Biint[Bisize - 1 - p] = Bi % 2;
                 Bi /= 2;
                 p++;
             } while (Bi != 0);
+            Console.WriteLine($"Converting {input6} to binary is:  ");
             foreach (int nary in Biint)
             {
                 Console.Write(nary);
+            }
+            Console.WriteLine();
+
+
+            for (int j = 0; ; j++)
+            {
+                if (input6 <= Math.Pow(16, j))
+                {
+                    Hexsize = (j + 1);
+                    break;
+                }
+            }
+
+            string[] Hexint = new string[Hexsize];
+            do
+            {
+                if (Hex % 16 == 10)
+                {
+                    Hexint[Hexsize - 1 - s] = Convert.ToString('A');
+                    Hex /= 16;
+                    s++;
+                }
+                else if (Hex % 16 == 11)
+                {
+                    Hexint[Hexsize - 1 - s] = Convert.ToString('B');
+                    Hex /= 16;
+                    s++;
+                }
+                else if (Hex % 16 == 12)
+                {
+                    Hexint[Hexsize - 1 - s] = Convert.ToString('C');
+                    Hex /= 16;
+                    s++;
+                }
+                else if (Hex % 16 == 13)
+                {
+                    Hexint[Hexsize - 1 - s] = Convert.ToString('D');
+                    Hex /= 16;
+                    s++;
+                }
+                else if (Hex % 16 == 14)
+                {
+                    Hexint[Hexsize - 1 - s] = Convert.ToString('E');
+                    Hex /= 16;
+                    s++;
+                }
+                else if (Hex % 16 == 15)
+                {
+                    Hexint[Hexsize - 1 - s] = Convert.ToString('F');
+                    Hex /= 16;
+                    s++;
+                }
+                else
+                {
+                    Hexint[Hexsize - 1 - s] = Convert.ToString(Hex % 16);
+                    Hex /= 16;
+                    s++;
+                }
+            } while (Hex != 0);
+            Console.Write($"Converting {input6} to hexadecimal is: ");
+            foreach (var Hexadecimal in Hexint)
+            {
+                Console.Write(Hexadecimal);
             }
 
 
