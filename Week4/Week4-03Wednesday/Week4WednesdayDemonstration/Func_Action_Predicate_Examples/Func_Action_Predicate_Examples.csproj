@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C9931865-A3BE-48DE-951E-9A572C60A458}</ProjectGuid>
+    <ProjectGuid>{4249641E-7B3D-4DCE-93CF-A07ECB26CF81}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>WeeklyTest3</RootNamespace>
-    <AssemblyName>WeeklyTest3</AssemblyName>
+    <RootNamespace>Func_Action_Predicate_Examples</RootNamespace>
+    <AssemblyName>Func_Action_Predicate_Examples</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,14 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Question2Classes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Question1Classes.cs" />
-    <Compile Include="Question3Classes.cs" />
-    <Compile Include="Question4Classes.cs" />
-    <Compile Include="Question5Classes.cs" />
-    <Compile Include="Question6Classes.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

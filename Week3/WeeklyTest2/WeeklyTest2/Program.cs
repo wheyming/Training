@@ -128,13 +128,13 @@ namespace WeeklyTest2
                                                 {
                                                     case "First":
                                                         {
-                                                            Console.WriteLine($"The total cost of your journey of distance {q3input} flying First Class is {tc.totalcost(q3input)}.");
+                                                            Console.WriteLine($"The total cost of your journey of distance {q3input} flying First Class is {fc.totalcost(q3input)}.");
                                                             q3bool = false;
                                                             break;
                                                         }
                                                     case "Second":
                                                         {
-                                                            Console.WriteLine($"The total cost of your journey of distance {q3input} flying Second Class is {tc.totalcost(q3input)}.");
+                                                            Console.WriteLine($"The total cost of your journey of distance {q3input} flying Second Class is {sc.totalcost(q3input)}.");
                                                             q3bool = false;
                                                             break;
                                                         }

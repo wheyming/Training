@@ -17,7 +17,7 @@ namespace WeeklyTest3
 
 
         // needed for methods to run asynchronously, and event is not able to access this value if I set it private, will think about alternative solutions.
-        static public /* private required */int Counter { get; set; } 
+        static private /* private required */int Counter { get; set; } 
 
 
         public void start()
@@ -38,6 +38,17 @@ namespace WeeklyTest3
             }
             Thread.Sleep(200); // To enable increment counter to catch up before printing value;
             Console.WriteLine($"Counter value is: {Counter}.");
+        }
+
+        public void Timer_startEvent()
+        {
+            Console.WriteLine("Timer started.");
+            Timer.Counter = 0;
+            do
+            {
+                Thread.Sleep(5000);
+                Timer.Counter = Timer.Counter + 1;
+            } while (Program.isCounterRunning == true);
         }
     }
 }

@@ -46,7 +46,7 @@ namespace WeeklyTest3
                             Console.WriteLine("Question 3 Weekly Test 3.");
                             Timer timer = new Timer();
                             timer.stopEvent += Timer_stopEvent;
-                            timer.startEvent += Timer_startEvent;
+                            timer.startEvent += timer.Timer_startEvent;
 
                             timer.start();
                             Thread.Sleep(500);
@@ -113,17 +113,6 @@ namespace WeeklyTest3
             }
         }
 
-        private static void Timer_startEvent()
-        {
-            Console.WriteLine("Timer started.");
-            Timer.Counter = 0;
-            do
-            {
-                Thread.Sleep(5000);
-                Timer.Counter = Timer.Counter + 1;
-            } while (Program.isCounterRunning == true);
-        }
-
         private static void Timer_stopEvent()
         {
             isCounterRunning = false;
@@ -131,7 +120,6 @@ namespace WeeklyTest3
 
         private static void Q1LotteryManager_getLotteryNumEvent()
         {
-            LotteryManager Q1LotteryManager = new LotteryManager();
             Random rand = new Random();
             bool w = true;
             for (int q1i = 0; q1i < 5; q1i++)
