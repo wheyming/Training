@@ -30,18 +30,65 @@ namespace Week4WednesdayPractice_2
         public string[] Q2arr = new string[] { "Poo", "Poo Poo", "Potato", "Parrot", "Papaya" };
 
     }
-    
-    public class MyArgumentException : Exception
-    {
-        public MyArgumentException()
-        {
 
+    class Question3Classes
+    {
+        public class MyArgumentException : Exception
+        {
+            public MyArgumentException()
+            {
+
+            }
+            public MyArgumentException(int a, int b) : base(String.Format("Integer {0} and {1} are equal.", a, b))
+            {
+            
+            }
         }
-        public MyArgumentException(int a, int b)
+
+        public void checkingQ3()
+        {
+            Console.WriteLine("Enter integer a");
+            int a = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Enter integer b");
+            int b = Int32.Parse(Console.ReadLine());
+
+            try
+            {
+                checkEqual(a, b);
+            }
+            catch (MyArgumentException ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        public void checkEqual(int a, int b)
+        {
+            if (a == b)
+            {
+                throw new MyArgumentException(a, b);
+            }
+        }
+    }
+
+    class Question4Classes
+    {
+        class Q4EventArgs : EventArgs
+        {
+            public Q4EventArgs()
+            {
+
+            }
+
+            
+        }
+
+        class Q4publisher
         {
 
         }
     }
+
 
     class Program
     {
@@ -70,6 +117,13 @@ namespace Week4WednesdayPractice_2
             };
             Console.WriteLine(Q2predicate("Papaya"));
             Console.ReadLine();
+
+
+
+            Question3Classes Q3 = new Question3Classes();
+            Q3.checkingQ3();
+            Console.ReadLine();
+
 
 
 

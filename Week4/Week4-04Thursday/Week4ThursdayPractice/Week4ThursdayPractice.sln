@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week4ThursdayPractice", "Week4ThursdayPractice\Week4ThursdayPractice.csproj", "{86067365-081F-42E3-A637-256BF4608B56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week4ThursdayPractice_2", "Week4ThursdayPractice_2\Week4ThursdayPractice_2.csproj", "{A878AE42-47B4-4465-B039-A0D5B562E613}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{86067365-081F-42E3-A637-256BF4608B56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86067365-081F-42E3-A637-256BF4608B56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86067365-081F-42E3-A637-256BF4608B56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86067365-081F-42E3-A637-256BF4608B56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A878AE42-47B4-4465-B039-A0D5B562E613}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A878AE42-47B4-4465-B039-A0D5B562E613}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A878AE42-47B4-4465-B039-A0D5B562E613}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A878AE42-47B4-4465-B039-A0D5B562E613}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3BAF0856-0CB8-48B8-90E8-2A109FFAE09C}
+	EndGlobalSection
+EndGlobal
