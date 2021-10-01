@@ -72,29 +72,34 @@ namespace Questions
         static void Main(string[] args)
         {
 
-            // Q1
-            Calculation C = new Calculation();
-            Thread Reportvalue = new Thread(C.ReportTotalEarned);
-            C.Input();
-            Reportvalue.Start();
-            C.Calculate();
-            Console.ReadLine();
+            //// Q1
+            //Calculation C = new Calculation();
+            //Thread Reportvalue = new Thread(C.ReportTotalEarned);
+            //C.Input();
+            //Reportvalue.Start();
+            //C.Calculate();
+            //Console.ReadLine();
 
 
-            //Q2
-            Question2 Q2 = new Question2();
-            Thread Q2add = new Thread(Q2.addNumbers);
-            Q2.getInput();
-            Q2add.Start();
-            Thread.Sleep(100);
-            Q2.printnumbers();
-            Q2add.Abort();
-            Console.ReadLine();
+            ////Q2
+            //Question2 Q2 = new Question2();
+            //Thread Q2add = new Thread(Q2.addNumbers);
+            //Q2.getInput();
+            //Q2add.Start();
+            //Thread.Sleep(100);
+            //Q2.printnumbers();
+            //Q2add.Abort();
+            //Console.ReadLine();
 
-            
+
             //Q3
-
-
+            Question3 Q3 = new Question3();
+            Thread Q3spaces = new Thread(Q3.printSpaces);
+            Q3.getQ3input();
+            Q3spaces.Start();
+            Thread.Sleep(100);
+            Q3.printAlphabet();
+            Console.ReadLine();
         }
     }
 }
