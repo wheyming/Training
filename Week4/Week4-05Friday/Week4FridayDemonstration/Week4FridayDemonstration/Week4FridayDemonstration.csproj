@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A878AE42-47B4-4465-B039-A0D5B562E613}</ProjectGuid>
+    <ProjectGuid>{0F895E6F-4A83-4856-B05F-16303E570236}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Week4ThursdayPractice_2</RootNamespace>
-    <AssemblyName>Week4ThursdayPractice_2</AssemblyName>
+    <RootNamespace>Week4FridayDemonstration</RootNamespace>
+    <AssemblyName>Week4FridayDemonstration</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -45,8 +45,6 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Question1Classes.cs" />
-    <Compile Include="Question2Classes.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
