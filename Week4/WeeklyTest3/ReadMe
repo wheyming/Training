@@ -1,0 +1,43 @@
+1.)	Write a program with following constitutes
+-	The program would represent a lottery system.
+-	Every time a customer buys a lottery a random 12-digit number will be created and sent to him.
+-	A lottery manager class keeps track of all the lotteries that were sold.
+-	Finally, the manager class has a SelectWinner() method which randomly selects a lottery number and displays the winner’s name and associated lottery number.
+-	The lottery manager does not select a winner till there are at least some minimum numbers of participants in the lottery draw. (You can fix the number as your choice)
+-	The lottery number and winner method must not return value rather implement event.
+
+2.)	Write a C# program which as a delegate for performing some operations.
+-	The delegate should be able to accept multiple input types and return multiple return types.
+-	There will be 3 more classes which has compatible method signature same as the delegate and they take different input types and return different types individually.
+-	The delegate is assigned to all three methods using multicast functionality.
+-	When the delegate is called all three outputs must be returned and display.
+
+3.)	Write a C# program which as the following construct:
+-	The Timer class need to have a functionality to start a Counter and increment the Counter by 1 every five seconds.
+-	The Timer class need to have a Stop method with void return type which stops the counter and returns the counter value.
+-	The counter property of the class must be private and outside class should not be able to access it directly.
+-	The Main class which calls the Timer class should have a Property isCounterRunning which is to be set to true only when counter is started. But the Main Class should not change its value, it should be changed by the Timer class after the counter is started.
+
+4.)	Write a Sample C# program for Courier Sorting Facility
+-	There should be a Package class which defines the tracking Id, Sender Name, Receiver Name and Receiver Address.
+-	There should be a PackageManager class which maintains a list of Packages present in the sorting facility.
+-	The PackageManager has two methods Receive and Dispatch which can take argument of tracking ID of variable length and either add to the collection (in case of receive) or remove from collection (in case of displatch).
+-	The Package manager must have a display inventory which should show the number of packages available currently in the inventory and their information.
+
+5.)	Write program for a water pump station.
+-	The Pump station has a reservoir which has a maximum water holding limit. (100000 litres)
+-	The Pump station has 3 input pumps which pumps water into the station from nearby water bodies at (100 litres per minute).
+-	The pump station has 10 output pumps which pumps water out of the station to different parts of the City at (10 litres per minute).
+-	At anytime any number of input and output pumps could be opened.
+-	Each part of the city has their own water reserve with a maximum capacity of 10000 litres.
+-	When the city reserves reach 90% of their capacity, they notify the pump station to stop pumping water and the pump station stops water supply.
+-	Similarly, when the pump station reaches 90% of its capacity it automatically stops the input pumps. When it’s water reserve reaches 50% again it starts the input pumps.
+-	When the operator starts the pump station it starts reporting the pump status (input and output) of each pump and capacity of each reservoir every minute. The output is displayed on screen.
+-	Implement the program using delegates and events.
+
+6.)	Write a C# program having following structure
+-	A class which has an array of 10 elements, and you can access the element by calling a method GetElement(int i) where i is the index of the element.
+-	If ‘i’ is outside the bounds the program handles it and show a user-friendly message that the index you provided does not exist.
+-	Similarly, the above class must contain a method called division which divides two numbers and show you answer. Any division by 0 must be handled and shown an appropriate message.
+-	Finally, the same class has a third method takes two parameter an input string and an index which does calculate the string length and returns the character at index I, this method should give different error messages if a string object is null and if an index is out of bounds.
+-	All the functionalities must be implemented using exception handling. 
