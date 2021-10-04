@@ -1,5 +1,5 @@
 # Training
-Organized by weeks.
+Organized by weeks. Questions will be in a ReadMe file in specific pratice folder.
 
 Week 1: Classes
 
