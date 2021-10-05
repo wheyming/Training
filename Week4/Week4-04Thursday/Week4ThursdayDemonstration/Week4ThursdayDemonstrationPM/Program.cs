@@ -13,7 +13,17 @@ namespace Week4ThursdayDemonstrationPM
         {
             Console.WriteLine("In CallDisplayAsynchronously");
             Thread t = new Thread(() => { Display(); });
-            Thread tp = new Thread(new ParameterizedThreadStart(DisplayParameter));
+            
+            // Different ways to create a Parameterized Thread.
+            ParameterizedThreadStart param = new ParameterizedThreadStart(DisplayParameter);
+            Thread tp = new Thread(param);
+
+            Thread temp1 = new Thread(new ParameterizedThreadStart(DisplayParameter)); // Same as 17 + 18.
+
+            Thread temp = new Thread((x) => { DisplayParameter(x); }); // same as line 17 + 18 and 20.
+            //
+            
+            
             tp.Priority = ThreadPriority.Highest;
             ThreadStart start = new ThreadStart(Display1);
             

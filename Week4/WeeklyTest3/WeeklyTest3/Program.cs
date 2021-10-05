@@ -13,7 +13,7 @@ namespace WeeklyTest3
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Toh Wei Ming                Weekly Test 2");
+            Console.WriteLine("Toh Wei Ming                Weekly Test 3");
             bool w = true;
             while (w == true)
             {
