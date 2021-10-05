@@ -1,0 +1,8 @@
+1.)	Write a class which has a function which can take any function as an argument. Execute the function passed as an argument and print the name of the function to be executed.
+
+2.)	Create a class which has an array with some values. Constitute a function which can evaluate whether a user provided parameter is present in the array using Predicate delegate.
+
+3.)	Write a program which takes two arguments and does some operation. If the value of the two operand is same then throw a custom exception called MyArgumentException which passes a message "Two operands cannot be same". Print the message on the caller class.
+->Create a class, has a function that takes 2 arguments, check if both are equal, then raise a custom exception, throw from original exception, then print from constructor of custom exception.
+
+4.)	Write a program which uses the EventHandler delagate to notify the caller using a custom eventArgs. In the custom eventargs you should have your Message and an exception object to notify whether exception occured or not.
