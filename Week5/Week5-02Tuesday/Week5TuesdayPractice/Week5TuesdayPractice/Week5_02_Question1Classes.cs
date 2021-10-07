@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Week4ThursdayPractice_2
+namespace Week5TuesdayPractice
 {
     class items<T>
     {
@@ -22,25 +22,26 @@ namespace Week4ThursdayPractice_2
     class Methods
     {
         bool w;
-        int same;
+        bool v;
+        int same;                
+        int Q1input3;
         string Q1input1;
         string Q1input2;
+        items<string> studentname = new items<string>();
+        items<string> studentnumber = new items<string>();
+        items<string> bookname = new items<string>();
+        items<int> booknumber = new items<int>();
 
-
-        public void callingMethod()
+        public void callingMethod(out int number)
         {
-            items<string> studentname = new items<string>();
-            items<string> studentnumber = new items<string>();
-            items<string> bookname = new items<string>();
-            items<int> booknumber = new items<int>();
+
             studentname.itemarr = new string[5] { "A", "B", "C", "D", "E" };
             studentnumber.itemarr = new string[5] { "1110", "1111", "1112", "1113", "1114" };
             bookname.itemarr = new string[8] { "AAAAAAAA", "AAAAAB", "AHASJHA", "AAAAASAA", "AAASA", "AAEAA", "AESA", "AASJJA" };
             booknumber.itemarr = new int[8] { 1, 2, 3, 4, 5, 6, 7, 8 };
-
-
             do
             {
+
                 w = true;
                 try
                 {
@@ -59,11 +60,28 @@ namespace Week4ThursdayPractice_2
                         {
                             if (i == 4)
                             {
-                                w = false;
                                 throw new WrongStudentException();
                             }
                         }
                     }
+                    do
+                    {
+                        Console.WriteLine("Please enter code of book that you are borrowing.");
+                        Q1input3 = int.Parse(Console.ReadLine());
+                        foreach (int num in booknumber.itemarr)
+                        {
+                            if (Q1input3 == num)
+                            {
+                                v = true;
+                                break;
+                            }
+                        }
+                        if (v == false)
+                        {
+                            throw new WrongBookException();
+                        }
+                    } while (v == false);
+
                 }
                 catch (FormatException ex)
                 {
@@ -72,28 +90,19 @@ namespace Week4ThursdayPractice_2
                 }
                 catch (WrongStudentException ex)
                 {
-
+                    w = false;
                 }
-            } while (w == false);
-
-            try
-            {
-                Console.WriteLine("Please enter code of book that you are borrowing.");
-                int Q1input3 = int.Parse(Console.ReadLine());
-                foreach (int num in booknumber.itemarr)
+                catch (WrongBookException ex)
                 {
-                    if (Q1input3 == num)
-                    {
-                        Console.WriteLine($"{studentname.itemarr[same]} have borrowed \"{ bookname.itemarr[Array.IndexOf(booknumber.itemarr, num)]} \" with book code {num}");
-                    }
+                    v = false;
                 }
-            }
-            catch (Exception ex)
-            {
+                number = Q1input3;
+            } while (w == false);
+        }
 
-            }
-
-
+        public void borrowBook(object Q1input3)
+        {
+            Console.WriteLine($"{studentname.itemarr[same]} have borrowed \"{ bookname.itemarr[Array.IndexOf(booknumber.itemarr, Q1input3)]} \" with book code {Q1input3}");
         }
 
     }
@@ -103,6 +112,14 @@ namespace Week4ThursdayPractice_2
         public WrongStudentException() : base()
         {
             Console.WriteLine("Incorrect student name or student number");
+        }
+    }
+
+    class WrongBookException : Exception
+    {
+        public WrongBookException() : base()
+        {
+            Console.WriteLine("Incorrect book number.");
         }
     }
 }

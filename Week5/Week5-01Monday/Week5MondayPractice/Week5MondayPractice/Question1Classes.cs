@@ -16,8 +16,6 @@ namespace Week5MondayPractice
     }
     class Question1Classes
     {
-
-
         public event CalculateAngles CalculateAnglesEvent;
         public void checkAngles()
         {
