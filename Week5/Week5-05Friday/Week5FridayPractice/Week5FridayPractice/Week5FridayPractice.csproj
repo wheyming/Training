@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{68E7AC9B-7C1D-4F04-BD20-250220853827}</ProjectGuid>
+    <ProjectGuid>{9A99DAA3-08EA-4446-9669-20121C189460}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Week5TuesdayPractice</RootNamespace>
-    <AssemblyName>Week5TuesdayPractice</AssemblyName>
+    <RootNamespace>Week5FridayPractice</RootNamespace>
+    <AssemblyName>Week5FridayPractice</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,10 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HotelDatabase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Week5_02_Question1Classes.cs" />
-    <Compile Include="Week5_02_Question2Classes.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

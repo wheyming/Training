@@ -17,8 +17,6 @@ namespace Week5TuesdayPractice
         }
     }
 
-
-
     class Methods
     {
         bool w;

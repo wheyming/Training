@@ -11,14 +11,21 @@ namespace Week5TuesdayPractice
     {
         static void Main(string[] args)
         {
-            int y;
-            for(; ; )
-            {
-                Methods Q1 = new Methods();
-                Q1.callingMethod(out y);
-                Thread borrowBookp = new Thread(Q1.borrowBook);
-                borrowBookp.Start(y);
-            }                
+            //int y;
+            //for(; ; )
+            //{
+            //    Methods Q1 = new Methods();
+            //    Q1.callingMethod(out y);
+            //    Thread borrowBookp = new Thread(Q1.borrowBook);
+            //    borrowBookp.Start(y);
+            //}
+
+            BloodBank Blood = new BloodBank();
+            Blood.lowBloodEvent += Blood.BloodBank_lowBloodEvent;
+
+            Thread lowbloodthread = new Thread(Blood.lowBloodStock);
+
+            lowbloodthread.Start();
 
         }
     }
