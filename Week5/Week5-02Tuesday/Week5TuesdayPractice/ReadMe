@@ -1,0 +1,3 @@
+1.)	write a program to issue a book from library, to enter the library you need to be a student of the class (need to verify using some roll no. etc.) but you can only issue one book at a time. give the details of student after the book is issued.  *Use multithreading.
+
+2.)	create a blood bank to collect blood units of different blood groups. you will supply this blood to all the needy people , at a time you can only store 50 units of blood. if your stock goes down below 5 units it shows a warning message to collect urgently . take a track of supply units of different blood groups. *Use multithreading.
