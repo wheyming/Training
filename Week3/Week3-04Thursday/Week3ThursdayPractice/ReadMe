@@ -14,14 +14,14 @@
 -	The Tsunami Class will notify it’s subscribers regarding the probability of a Tsunami. The main class will display it.
 
 3.)	Write a program for random encryption key generator
--	 The program will take few inputs from a user (characters to be used for generating a random key, public key for which an encryption key will be generated, Time difference within which a key should be generated)
+-	 The program will take few inputs from a user (characters to be used for generating a random key, public key for which an encryption key will be generated, Time difference          within which a key should be generated)
 -	 The generator class has a member called Public key which has to bootstrapped during object creation.
 -	 The generator class keeps track of each of the random string generated and can return it if needed by an exposed indexer.
 -	 The generator class have additional method called "Start" and "Stop" which starts and stops generating keys
 -	 The main class can create an object of generator class and then can start or stop depending on its need.
 -	 It can subscribe to an event exposed by generator class to display all the encryption keys sent by the generator. 
 
-4.)	create a hotel mgmt.  system to perform different operation given below.                                                                     first you must book a room according to your convenience. then you will choose the services you want then a bill will generate with all the details and with tax
+4.)	create a hotel mgmt. system to perform different operation given below. First you must book a room according to your convenience. then you will choose the services you want    then a bill will generate with all the details and with tax
 
 5.)	create a hospital mgmt. system to enrol a patient according to his condition, ex. emergency, outpatient department, clinical services etc. then after the inspection the doctor will send  him to pharmacy to collect the medicine . and at last, you need to generate a bill with all the patient details
 
