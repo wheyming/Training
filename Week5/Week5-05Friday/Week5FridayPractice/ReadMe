@@ -1,0 +1,5 @@
+1.)	I want to design a room booking software for my hotel, so that all my bookings will be transparent for taxation.  And I can search the data to find a customer.
+2.)	let's design a stock and billing software for a hardware store.
+Product, Customer, Supplier, billing, sales. Customer details for invoice. Taxation, and number of continue purchase. 
+Hardware store contains all kind of products. We need a stock management. Supplier that supplies the stock we will get the details from there. Product name, product ID, purchase price and selling price. There’s profit. 
+Visualize the question, then construct the software. 
