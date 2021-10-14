@@ -9,23 +9,36 @@ namespace Week6TuesdayPractice
 {
     class User
     {
-        public string userID { get; private set; }
-        public string password { get; private set; }
+        string task;
+        string submit;
 
-        public User(string ID, string pass)
+
+        public void viewTask(string ID)
         {
-            userID = ID;
-            password = pass;
+            if (Directory.Exists("User\\" + ID))
+            {
+                FileStream userFile = new FileStream("User\\" + ID + "\\Task.txt", FileMode.Open, FileAccess.Read);
+                StreamReader userFileReadTask = new StreamReader(userFile);
+                task = userFileReadTask.ReadToEnd();
+                Console.WriteLine(task);
+                userFileReadTask.Close();
+                userFile.Close();
+            }
         }
 
-        public void viewTask(string ID, string Password)
+        public void submitTask(string ID)
         {
-            
-        }
-
-        public void submitTask(string ID, string Password)
-        {
-
+            if (Directory.Exists("User\\" + ID))
+            {
+                Console.WriteLine("Please enter task submission.");
+                submit = Console.ReadLine();
+                FileStream userFile1 = new FileStream("User\\" + ID + "\\SubmitTask.txt", FileMode.Open, FileAccess.Write);
+                StreamWriter userFileSubmitTask = new StreamWriter(userFile1);
+                userFileSubmitTask.WriteLine(submit);
+                userFileSubmitTask.Flush();
+                userFileSubmitTask.Close();
+                userFile1.Close();
+            }
         }
     }
 
@@ -36,15 +49,16 @@ namespace Week6TuesdayPractice
         {
             Console.WriteLine("Enter userID of user for task giving.");
             input1 = Console.ReadLine();
-            if (File.Exists(input1 + ".txt"))
+            if (Directory.Exists("User\\" + input1))
             {
-                FileStream userFile = new FileStream(input1 + ".txt", FileMode.Append, FileAccess.Write);
+                FileStream userFile = new FileStream("User\\" + input1 + "\\Task.txt", FileMode.OpenOrCreate, FileAccess.Write);
+                FileStream userFile1 = new FileStream("User\\" + input1 + "\\SubmitTask.txt", FileMode.OpenOrCreate, FileAccess.Read);
                 StreamWriter userFileWriteTask = new StreamWriter(userFile);
-                userFileWriteTask.WriteLine();
-                Console.WriteLine("Enter task for user");
+                Console.WriteLine($"Enter task for user {input1}");
                 string input2 = Console.ReadLine();
-                userFileWriteTask.Write("Task for user: ");
+                userFileWriteTask.Write($"Task for user {input1}: ");
                 userFileWriteTask.WriteLine(input2);
+                userFile1.Close();
                 userFileWriteTask.Flush();
                 userFileWriteTask.Close();
                 userFile.Close();
@@ -52,7 +66,7 @@ namespace Week6TuesdayPractice
         }
     }
 
-    class SuperAdmin
+    class SuperAdmin : Admin
     {
         bool duplicateIDbool;
         string input1;
@@ -64,7 +78,7 @@ namespace Week6TuesdayPractice
                 duplicateIDbool = false;
                 Console.WriteLine("Please input userID to be created.");
                 input1 = Console.ReadLine();
-                if (File.Exists(input1 + ".txt"))
+                if (Directory.Exists("User\\" + input1))
                 {
                     Console.WriteLine("Duplicate userID.");
                     duplicateIDbool = true;
@@ -72,11 +86,8 @@ namespace Week6TuesdayPractice
             } while (duplicateIDbool == true);
             Console.WriteLine($"Please input password for userID {input1}");
             string input2 = Console.ReadLine();
-            FileStream userFile = new FileStream(input1 + ".txt", FileMode.CreateNew, FileAccess.ReadWrite);
-            StreamWriter userFilewrite = new StreamWriter(userFile);
-            userFilewrite.WriteLine(input2);
-            userFilewrite.Flush();
-            userFilewrite.Close();
+            Directory.CreateDirectory("User\\" + input1);
+            FileStream userFile = new FileStream("User\\" + input1 + "\\" + input2, FileMode.CreateNew);
             userFile.Close();
         }
 
@@ -87,13 +98,13 @@ namespace Week6TuesdayPractice
                 duplicateIDbool = false;
                 Console.WriteLine("Please input userID to be deleted.");
                 input1 = Console.ReadLine();
-                if (!File.Exists(input1 + ".txt"))
+                if (!Directory.Exists("User\\" + input1))
                 {
                     Console.WriteLine("Invalid userID.");
                     duplicateIDbool = true;
                 }
             } while (duplicateIDbool == true);
-            File.Delete(input1 + ".txt");
+            Directory.Delete("User\\" + input1);
         }
     }
 }
